@@ -21,6 +21,10 @@
       line-height: 128%;
       margin: 0;
     }
+
+    @include onDesktop {
+      font-size: 56px;
+    }
   }
 
   &__field-block {

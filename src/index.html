@@ -6,8 +6,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
     <title>CRAZYBABY</title>
     <link rel="stylesheet" href="./styles/main.scss">
+
+    <!-- <link rel="stylesheet" href="/slick/slick.scss"> -->
+    <!-- <link rel="stylesheet" href="/slick/slick-theme.scss"> -->
   </head>
   <body class="page">
     <header class="header" id="header">
@@ -148,7 +152,7 @@
 
             <li class="nav__item">
               <a
-                href="#"
+                href="#abous-us"
                 class="nav__item-link"
               > about us
               </a>
@@ -156,7 +160,7 @@
 
             <li class="nav__item">
               <a
-                href="#"
+                href="#features"
                 class="nav__item-link"
               > features
               </a>
@@ -164,7 +168,7 @@
 
             <li class="nav__item">
               <a
-                href="#"
+                href="#contact-us"
                 class="nav__item-link"
               > get in touch
               </a>
@@ -229,7 +233,7 @@
 
                 <li class="nav__item">
                   <a
-                    href="#"
+                    href="#about-us"
                     class="nav__item-link"
                   > about us
                   </a>
@@ -237,7 +241,7 @@
 
                 <li class="nav__item">
                   <a
-                    href="#"
+                    href="#features"
                     class="nav__item-link"
                   > features
                   </a>
@@ -245,7 +249,7 @@
 
                 <li class="nav__item">
                   <a
-                    href="#"
+                    href="#contact-us"
                     class="nav__item-link"
                   > get in touch
                   </a>
@@ -443,7 +447,7 @@
                     <h3 class="features__card-title">
                       sound &amp; music
                     </h3>
-                    
+
                     <div class="features__card-benefits">
                       <ul class="features__card-list">
                         <li class="features__card-item">Feel-in-chest Base Power</li>
@@ -490,37 +494,60 @@
                   <div class="features__card-img-main features__card-main-4">
                   </div>
                 </div>
-              </div>
 
-              <div class="features__bottom-block">
-                <div class="features__card-slider">
-                  <div class="features__card-slider-block">
-                    <div class="features__card-top">
-                      <div class="features__card-slider-arrowL">
-                        <img
-                          src="./styles/images/icon/arrowL.png"
-                          alt="arrowL"
-                          class="icon__arrow"
-                          id="prev"
-                        >
-                      </div>
-                      <div class="features__card-slider-arrowR">
-                        <img
-                          src="./styles/images/icon/arrowR.png"
-                          alt="arrowR"
-                          class="icon__arrow"
-                          id="next"
-                        >
-                      </div>
+                <div class="slider">
+                  <div class="features__card slider__card">
+                    <h3 class="features__card-title">
+                      sound &amp; music
+                    </h3>
+
+                    <div class="features__card-benefits">
+                      <ul class="features__card-list">
+                        <li class="features__card-item">Feel-in-chest Base Power</li>
+                        <li class="features__card-item">Lossless Digital Audio Transmission</li>
+                        <li class="features__card-item">Easy & Stable Stereo Pairing</li>
+                        <li class="features__card-item">Crisp and Clear High Frequency Sound</li>
+                        <li class="features__card-item">Streams from Cloud Music and Local Library</li>
+                        <li class="features__card-item">Auto Music Playback from Last Song Stopped</li>
+                      </ul>
                     </div>
-                    <div class="features__card-slider-num">
-                      <p class="features__card-previous-page">01</p>
-                      <span class="features__card-slash">/</span>
-                      <p class="features__card-next-page">03</p>
+                  </div>
+
+                  <div class="features__card slider__card">
+                    <h3 class="features__card-title">
+                      connectivity
+                    </h3>
+                    <div class="features__card-benefits">
+                      <ul class="features__card-list">
+                        <li class="features__card-item">Hands Free Wireless Audio</li>
+                        <li class="features__card-item">Bluetooth 4.0 LE</li>
+                        <li class="features__card-item">Wi-Fi 2.4 GHz (802.11 b/g/n)</li>
+                        <li class="features__card-item">Smart Multiroom System Set Up</li>
+                        <li class="features__card-item">Party Mode with 6.0 Units and above</li>
+                        <li class="features__card-item">MESHNET Multi Speaker Network</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="features__card slider__card">
+                    <h3 class="features__card-title">
+                      app features
+                    </h3>
+
+                    <div class="features__card-benefits">
+                      <ul class="features__card-list">
+                        <li class="features__card-item">Customize Music Schedule</li>
+                        <li class="features__card-item">Wake Up with Favorite Songs</li>
+                        <li class="features__card-item">Home Detection Auto Wake Up</li>
+                        <li class="features__card-item">Color Wheel</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
+              </div>
 
+              <div class="count"></div>
+              <div class="features__bottom-block">
                 <div class="features__card-img">
                 </div>
               </div>
@@ -625,11 +652,22 @@
 
         <div class="footer__terms-block">
           <p class="footer__terms">
-            &copy; 2019 All rights reserved. Terms of Use & Privacy Policy
+            &copy; 2023 All rights reserved. Terms of Use & Privacy Policy
           </p>
         </div>
       </div>
     </footer>
-    <script type="text/javascript" src="scripts/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.js"></script>
+    <!-- <script src="slick/slick.min.js"></script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="text/javascript" src="scripts/js/main.js"></script>
   </body>
 </html>

@@ -1,13 +1,4 @@
 .features {
-
-  &__bottom-block {
-    @include onTablet {
-      display: flex;
-      flex-direction: row;
-      // margin-right: 20px;
-    }
-  }
-
   &__title {
     @include consentPaddingInline;
     margin: 0;
@@ -30,8 +21,7 @@
   }
 
   &__card-group {
-    display: grid;
-    grid-template-columns: repeat(3, 320px);
+    display: none;
 
     @include onDesktop {
       display: grid;
@@ -43,24 +33,26 @@
   &__card {
     margin-top: 32px;
     padding-top: 30px;
-    overflow-y: auto;
-    scroll-behavior: smooth;
     max-width: 320px;
+
+    @include onTablet{
+      max-width: 390px;
+    }
 
     @include onDesktop {
       min-width: 100%;
     }
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
 
     &-main {
-      max-width: 100%;
+      // max-width: 100%;
 
       @include onTablet {
         @include consentPaddingInline;
-        min-width: 290px;
+        // min-width: 100%;
       }
 
       @include onDesktop {
@@ -98,26 +90,6 @@
     &-top {
       display: flex;
     }
-
-    &-previous-page {
-      margin: 0;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 150%;
-      color: #333;
-    }
-
-    &-next-page,
-    &-slash {
-      margin: 0;
-      display: flex;
-      align-items: end;
-      font-size: 11px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal
-    }
   }
 
   &__card-block {
@@ -133,10 +105,6 @@
     color: #0c797a;
     text-transform: uppercase;
 
-    // @include onTablet {
-    //   padding-inline-start: 90px;
-    // }
-
     @include onDesktop {
       margin: 0;
       font-size: 34px;
@@ -146,6 +114,7 @@
   &__card-list {
     display: grid;
     row-gap: 10px;
+    width: 100%;
   }
 
   &__card-item {
@@ -160,44 +129,20 @@
     }
   }
 
-  &__card-slider {
-    margin-top: 50px;
-
-    @include onTablet {
-      padding-left: 90px;
-    }
-
-    @include onDesktop {
-      display: none;
-    }
-
-    &-block {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    &-num {
-      margin-top: 10px;
-      display: flex;
-      flex-direction: row;
-      column-gap: 3px;
-    }
-  }
 
   &__card-img {
     background-image: url("./images/features_img.png");
-    height: 20vh;
+    height: 50vh;
     background-repeat: no-repeat;
     background-position: center bottom;
-    background-size: 100%;
+    background-size: 90%;
 
     @include onTablet {
       background-image: url("./images/onTablet/features__img.png");
-      background-position: right bottom;
-      background-size: 80%;
-      height: 33vh;
-      width: 80%;
+      background-position: right;
+      background-size: contain;
+      height: 30vh;
+      width: 100%;
     }
 
     @include onDesktop {
@@ -215,8 +160,54 @@
   }
 }
 
-.cont {
-    display: flex;
-    flex-direction: row;
-    overflow-y: scroll;
+.slider {
+  position: relative;
+
+  @include onTablet {
+    // padding-inline-start: 90px;
+  }
+
+  @include onDesktop {
+    display: none;
+  }
+}
+
+.slick-slide:not(:last-child) {
+  margin-right: 140px;
+}
+
+.slick-track {
+  display: flex;
+  @include consentPaddingInline;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slider .slick-arrow {
+  position: absolute;
+  top: 420px;
+  font-size: 0;
+  width: 70px;
+  height: 20px;
+  border: none;
+ }
+
+ .slider .slick-arrow.slick-prev {
+  left: 65px;
+  background: url("./images/icon/arrowL.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+ }
+
+ .slider .slick-arrow.slick-next {
+  left: 135px;
+  background: url("./images/icon/arrowR.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+ }
+
+.count:active {
+  color: #0c797a;
 }

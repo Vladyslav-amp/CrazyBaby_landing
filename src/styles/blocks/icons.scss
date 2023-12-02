@@ -14,6 +14,17 @@
     height: 24px;
     width: 24px;
   }
+
+  &__arrowR {
+    cursor: pointer;
+  }
+
+  &__arrowR:hover {
+    background-image: url("./images/icon/arrowActive.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
 }
 
 .benefits__icon {
@@ -40,11 +51,11 @@
 }
 
 .footer__top-logo {
-  background-image: url("./images/icon/footer-logo__img.png");
+  background-image: url("./images/icon/footer-logo__img.svg");
   background-repeat: no-repeat;
-  background-size: contain;
-  width: 35vw;
-  height: 5vh;
+  background-size: 30%;
+  background-position: center;
+  height: 10vh;
 }
 
 .footer__top-up {
